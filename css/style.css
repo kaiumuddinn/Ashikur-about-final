@@ -1,0 +1,417 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@700&family=Poppins:wght@300;400;500;600;700&display=swap');
+:root{
+    --primaryfont: 'Poppins', sans-serif;
+    --secondaryfont: 'PT Sans', sans-serif;
+    --primarycolor: #353535;
+    --secondarycolor: #FFCC00;
+}
+/* COMMON CSS STARTS HERE */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+.container{
+    width: 1110px;
+    margin: auto;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+.center{
+    align-items: center;
+}
+body{
+    font-family: var(--primaryfont);
+}
+/* COMMON CSS ENDS HERE */
+
+
+/* NAV STARTS HERE */
+nav .logo{
+    width: 30%;
+}
+nav .menu{
+    width: 70%;
+    text-align: right;
+}
+nav .menu ul li{
+    display: inline-block;
+    position: relative;
+}
+nav .menu ul li a{
+    display: inline-block;
+    color: var(--primarycolor);
+font-size: 15px;
+font-weight: 500;
+line-height: 200%; /* 30px */
+padding: 18px 22px 5px 22px;
+text-transform: uppercase;
+}
+nav .menu ul li a::before{
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 1px;
+    background-color: var(--primarycolor);
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    transition: 500ms;
+}
+nav .menu ul li:hover a::before{
+    width: 100%;
+    opacity: 1;
+}
+nav .menu ul li .underline::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: var(--primarycolor);
+    bottom: 0;
+    left: 0;
+}
+/* NAV ENDS HERE */
+
+/* ABOUT ME STARTS HERE */
+#about_me .container{
+    background-image: url(./Images/about.png);
+    background-size: cover;
+    background-position: center;
+    padding: 40px 0;
+    margin-top: 60px;
+}
+#about_me h1{
+    color: #FFF;
+font-family: PT Sans;
+font-size: 46px;
+font-weight: 700;
+line-height: normal;
+text-align: center;
+}
+#about_me p{
+    color: #FFF;
+text-align: center;
+font-size: 18px;
+font-weight: 600;
+line-height: 190%; /* 34.2px */
+}
+/* ABOUT ME ENDS HERE */
+
+/* CONTENT STARTS HERE */
+#content{
+    margin-top: 86px;
+    
+}
+#content .container{
+    padding-bottom: 78px;
+    border-bottom: 1px solid #7A7A7A;
+}
+#content .img{
+    width: 400px;
+    margin-right: 39px;
+}
+#content .cnt{
+    width: 610px;
+}
+#content .cnt .text{
+    color: #7A7A7A;
+font-size: 19px;
+font-weight: 400;
+line-height: 200%; /* 38px */
+margin-bottom: 75px;
+margin-top: 14px;
+}
+.cnt .left{
+    width: 260px;
+}
+.cnt .left p{
+    color: #7A7A7A;
+font-size: 19px;
+font-weight: 500;
+line-height: 190%; /* 36.1px */
+margin-bottom: 12px;
+}
+.cnt .left p span{
+    color: black;
+    display: inline-block;
+    margin-left: 20px;
+}
+.cnt .left .number{
+    color: black;
+    margin-left: 20px;
+}
+.cnt .left .behance{
+    color: #3479FF;
+    text-decoration: underline;
+    padding-left: 10px;
+}
+.cnt .right{
+    width: 278px;
+}
+.cnt .right p{
+    color: #7A7A7A;
+font-size: 19px;
+font-weight: 500;
+line-height: 190%; /* 36.1px */
+margin-bottom: 12px;
+margin-left: 40px;
+}
+.cnt .right p span{
+    color: black;
+    display: inline-block;
+    margin-left: 20px;
+}
+.cnt .right p .language{
+    margin-left: 0;
+}
+.cnt .right .behance{
+    color: #3479FF;
+    text-decoration: underline;
+    padding-left: 10px;
+}
+#content .cnt .button a{
+    color: #FFF;
+font-size: 16px;
+font-weight: 500;
+line-height: 180%; /* 28.8px */
+background-color: var(--secondarycolor);
+display: inline-block;
+padding: 10px 21px;
+border-radius: 12px;
+margin-top: 44px;
+}
+#content .cnt .button a span{
+    display: inline-block;
+    margin-left: 11px;
+}
+/* CONTENT ENDS HERE */
+
+/* TIMELINE STARTS HERE */
+#timeline{
+    margin-top: 73px;
+}
+#timeline .heading{
+    width: 50%;
+    color: var(--primarycolor);
+font-family: PT Sans;
+font-size: 40px;
+font-weight: 700;
+line-height: normal;
+margin-bottom: 50px;
+}
+#timeline .timelines .card{
+    width: 50%;
+    margin-bottom: 54px;
+    padding-left: 80px;
+    position: relative;
+}
+#timeline .timelines{
+    position: relative;
+}
+#timeline .timelines::before{
+    content: '';
+    position: absolute;
+    height: 100%;
+    border: 2px dashed #7A7A7A;
+    left: 0;
+    top: 0;
+}
+#timeline .timelines::after{
+    content: '';
+    position: absolute;
+    height: 100%;
+    border: 2px dashed #7A7A7A;
+    left: 53%;
+    top: 0;
+}
+.timelines .card::before{
+    content: '';
+    position: absolute;
+    width: 34px;
+    height: 34px;
+    border: 2px dashed #7A7A7A;
+    border-radius: 50%;
+    left: -18px;
+    top: -8px;
+    background-color: white;
+}
+.timelines .card:nth-child(even)::before{
+    left: 15px;
+    background-color: white;
+    z-index: 10;
+}
+.timelines .card::after{
+    content: '';
+    width: 16px;
+    height: 16px;
+    background-color: #52AB70;
+    border-radius: 50%;
+    position: absolute;
+    top: 2px;
+    left: -8px;
+    z-index: 12;
+}
+.timelines .card:nth-child(even)::after{
+    left: 25px;
+    top: 2px;
+}
+.timelines .card:nth-child(3n + 3)::after{
+    background-color: #F17676;
+}
+.timelines .card:nth-child(3n + 4)::after{
+    background-color: #F17676;
+}
+.timelines .card:nth-child(3n + 5)::after{
+    background-color: #FFD233;
+}
+.timelines .card:nth-child(3n + 6)::after{
+    background-color: #FFD233;
+}
+.timelines .card p span{
+    font-size: 18px;
+    color: #7A7A7A;
+    display: inline-block;
+    margin-right: 13px;
+}
+.timelines .card p{
+    color: #7A7A7A;
+font-size: 16px;
+font-weight: 400;
+line-height: 190%; /* 30.4px */
+}
+.timelines .card h4{
+    color: var(--primarycolor);
+font-size: 20px;
+font-weight: 600;
+line-height: 180%; /* 36px */
+margin: 10px 0 16px 0;
+}
+.timelines .card .content{
+    color: #7A7A7A;
+font-size: 18px;
+font-weight: 400;
+line-height: 200.5%; /* 36.09px */
+}
+/* TIMELINE ENDS HERE */
+
+/* SKILL STARTS HERE */
+#skill{
+    margin: 119px 0;
+
+}
+#skill h1{
+    color: var(--primarycolor);
+font-family: PT Sans;
+font-size: 40px;
+font-weight: 700;
+line-height: normal;
+margin-bottom: 50px;
+}
+/* SKILL ENDS HERE */
+
+/* FOOTER STARTS HERE */
+footer{
+    padding: 70px 0 85px 0;
+    background-image: url(./Images/footer.png);
+    background-size: cover;
+    background-position: center;
+}
+footer .call{
+    width: 30%;
+    margin-top: 20px;
+}
+footer .call p{
+    color: #BBB9B9;
+font-size: 18px;
+font-weight: 400;
+line-height: 180%; /* 32.4px */
+margin-top: 182px;
+margin-bottom: 4px;
+}
+footer .call a{
+    color: #FFF;
+font-size: 20px;
+font-weight: 500;
+line-height: 180%; /* 36px */
+}
+footer .content{
+    width: 40%;
+}
+footer .content h1{
+    color: #FFF;
+font-size: 36px;
+font-weight: 700;
+line-height: 200%; /* 72px */
+}
+footer .content .p1{
+    color: #BBB9B9;
+font-size: 16px;
+font-weight: 400;
+line-height: 180%; /* 28.8px */
+}
+footer .content .p2{
+    color: #BBB9B9;
+font-size: 18px;
+font-weight: 400;
+line-height: 180%; /* 32.4px */
+margin-top: 94px;
+}
+footer .content a{
+    color: #FFF;
+font-size: 20px;
+font-weight: 500;
+line-height: 180%; /* 36px */
+}
+footer .socials{
+    width: 30%;
+}
+footer .socials .button{
+    display: inline-block;
+    background-color: var(--secondarycolor);
+    color: white;
+    border-radius: 16px;
+    padding: 15px 32px;
+    margin-top: 40px;
+    margin-left: 80px;
+}
+footer .socials .button span{
+    display: inline-block;
+    margin-left: 11px;
+}
+footer .socials .row p{
+    color: #FFF;
+font-size: 18px;
+font-weight: 400;
+line-height: 180%; /* 32.4px */
+}
+footer .socials ul li{
+    display: inline-block;
+}
+footer .socials .icons{
+    margin-top: 139px;
+}
+footer .socials .icons p{
+    margin-right: 24px;
+}
+footer .socials .icons ul li a{
+    width: 48px;
+    height: 48px;
+    background-color: #484848;
+    display: inline-block;
+    text-align: center;
+    line-height: 48px;
+    border-radius: 50%;
+    margin-right: 10px;
+    font-size: 20px;
+    color: white;
+}
+/* FOOTER ENDS HERE */
